@@ -1,0 +1,14 @@
+{
+    "Group": "Payment methods",
+    "FriendlyName": "BSV with Security",
+    "SystemName": "Payments.BSVwithSecurity",
+    "Version": "1.0",
+    "SupportedVersions": [ "4.40" ],
+    "Author": "Rommelnino",
+    "DisplayOrder": 1,
+    "FileName": "Nop.Plugin.Payments.BSVwithSecurity.dll",
+    "Description": "This plugin compares keys with known criminal activity and allows paying with BSV",
+    "LimitedToStores":"",
+    "LimitedToCustomerRoles":"",
+    "DependsOnSystemNames":"",
+}
