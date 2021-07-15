@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using Nop.Core;
 using Nop.Core.Domain.Orders;
 using Nop.Core.Domain.Payments;
@@ -251,6 +255,72 @@ namespace Nop.Plugin.Payments.Manual
             return Task.FromResult(false);
         }
 
+        /*public bool ValidEmail(string email)
+        {
+            Regex r = new Regex(@"^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$");
+
+            Match match = r.Match(email.ToLower());
+
+            if (match.Success)
+            {
+                return true;
+            }
+            else
+            {
+                // check if it's a custom email
+                r = new Regex(@"^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w+$");
+                match = r.Match(email.ToLower());
+                if (match.Success)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        [Newtonsoft.Json.JsonObject]
+        [Serializable]
+        public class PublicAddress
+        {
+            public string paymail { get; set; }
+        }*/
+
+        public async Task<string> GetPublicAddress()
+        {
+            //load settings for a chosen store scope
+            var storeScope = await _storeContext.GetActiveStoreScopeConfigurationAsync();
+            var manualPaymentSettings = await _settingService.LoadSettingAsync<ManualPaymentSettings>(storeScope);
+
+            /*if (ValidEmail(manualPaymentSettings.PaymentDestinationAddress))
+            {
+                var address = new PublicAddress();
+                address.paymail = manualPaymentSettings.PaymentDestinationAddress;
+                string key = "HxLw3QGt0cagPVxmSII5/y9wS9AqsAiXq4WZGFa520SOzO7YPCmQeA==";
+                string apiEndpoint = string.Format("https://fun-paymail-edx-bsv.azurewebsites.net/api/get_paymail_address?code={0}", key);
+
+                using (var client = new HttpClient())
+                {
+
+                    string myJson = JsonConvert.SerializeObject(address);
+
+                    var response = client.PostAsync(
+                        apiEndpoint,
+                        new StringContent(myJson, Encoding.UTF8, "application/json")).Result;
+
+                    var contents = response.Content.ReadAsStringAsync().Result;
+
+                    if (!string.IsNullOrEmpty(contents))
+                    {
+                        manualPaymentSettings.PaymentDestinationAddress = contents;
+                    }
+                }
+            }*/
+            return manualPaymentSettings.PublicAddress;
+        }
+
         /// <summary>
         /// Validate payment form
         /// </summary>
@@ -273,8 +343,9 @@ namespace Nop.Plugin.Payments.Manual
                 CardCode = form["CardCode"],
                 ExpireMonth = form["ExpireMonth"],
                 ExpireYear = form["ExpireYear"],
-                TxHash = form["TxHash"],
-                RequiredPaymentAmount = orderTotal
+                //TxHash = form["TxHash"],
+                RequiredPaymentAmount = orderTotal,
+                PaymentDestinationAddress = GetPublicAddress().Result
             };
             var validationResult = validator.Validate(model);
             if (!validationResult.IsValid)

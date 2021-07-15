@@ -24,5 +24,10 @@ namespace Nop.Plugin.Payments.Manual.Models
         [NopResourceDisplayName("Plugins.Payments.Manual.Fields.PaymentDestinationAddress")]
         public string PaymentDestinationAddress { get; set; }
         public bool PaymentDestinationAddress_OverrideForStore { get; set; }
+
+        [NopResourceDisplayName("Plugins.Payments.Manual.Fields.PublicAddress")]
+        public string PublicAddress { get; set; }
+        public bool PublicAddress_OverrideForStore { get; set; }
+
     }
 }

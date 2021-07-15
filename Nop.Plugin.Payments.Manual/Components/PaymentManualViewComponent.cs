@@ -11,9 +11,21 @@ using Nop.Services.Payments;
 using Nop.Services.Plugins;
 using Nop.Core;
 using System.Threading.Tasks;
+using Nop.Services.Configuration;
+using System.Text.RegularExpressions;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace Nop.Plugin.Payments.Manual.Components
 {
+    /*[Newtonsoft.Json.JsonObject]
+    [Serializable]
+    public class PublicAddress
+    {
+        public string paymail { get; set; }
+    }*/
+
     [ViewComponent(Name = "PaymentManual")]
     public class PaymentManualViewComponent : NopViewComponent
     {
@@ -21,16 +33,19 @@ namespace Nop.Plugin.Payments.Manual.Components
         private readonly IShoppingCartService _shoppingCartService;
         private readonly IWorkContext _workContext;
         private readonly IStoreContext _storeContext;
+        private readonly ISettingService _settingService;
 
         public PaymentManualViewComponent(IOrderTotalCalculationService orderTotalCalculationService,
                                     IShoppingCartService shoppingCartService,
                                     IWorkContext workContext,
-                                    IStoreContext storeContext)
+                                    IStoreContext storeContext,
+                                    ISettingService settingService)
         {
             _shoppingCartService = shoppingCartService;
             _workContext = workContext;
             _orderTotalCalculationService = orderTotalCalculationService;
             _storeContext = storeContext;
+            _settingService = settingService;
         }
 
         public async Task<decimal?> GetOrderTotal()
@@ -44,6 +59,65 @@ namespace Nop.Plugin.Payments.Manual.Components
 
             return orderTotal;
 
+        }
+
+        /*public bool ValidEmail(string email)
+        {
+            Regex r = new Regex(@"^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$");
+
+            Match match = r.Match(email.ToLower());
+
+            if (match.Success)
+            {
+                return true;
+            }
+            else
+            {
+                // check if it's a custom email
+                r = new Regex(@"^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w+$");
+                match = r.Match(email.ToLower());
+                if (match.Success)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }*/
+
+        public async Task<string> GetPublicAddress()
+        {
+            //load settings for a chosen store scope
+            var storeScope = await _storeContext.GetActiveStoreScopeConfigurationAsync();
+            var manualPaymentSettings = await _settingService.LoadSettingAsync<ManualPaymentSettings>(storeScope);
+
+            /*if (ValidEmail(manualPaymentSettings.PaymentDestinationAddress))
+            {
+                var address = new PublicAddress();
+                address.paymail = manualPaymentSettings.PaymentDestinationAddress;
+                string key = "HxLw3QGt0cagPVxmSII5/y9wS9AqsAiXq4WZGFa520SOzO7YPCmQeA==";
+                string apiEndpoint = string.Format("https://fun-paymail-edx-bsv.azurewebsites.net/api/get_paymail_address?code={0}", key);
+
+                using (var client = new HttpClient())
+                {
+                    
+                    string myJson = JsonConvert.SerializeObject(address);
+
+                    var response = client.PostAsync(
+                        apiEndpoint,
+                        new StringContent(myJson, Encoding.UTF8, "application/json")).Result;
+
+                    var contents = response.Content.ReadAsStringAsync().Result;
+
+                    if (!string.IsNullOrEmpty(contents))
+                    {
+                        manualPaymentSettings.PaymentDestinationAddress = contents;
+                    }
+                }
+            }*/
+            return manualPaymentSettings.PublicAddress;
         }
 
         public IViewComponentResult Invoke()
@@ -60,7 +134,8 @@ namespace Nop.Plugin.Payments.Manual.Components
                     new SelectListItem { Text = "Amex", Value = "Amex" },
                 },
 
-                RequiredPaymentAmount = orderTotal
+                RequiredPaymentAmount = orderTotal,
+                PaymentDestinationAddress = GetPublicAddress().Result
             };
 
             //years
@@ -77,7 +152,7 @@ namespace Nop.Plugin.Payments.Manual.Components
             }
 
             //set postback values (we cannot access "Form" with "GET" requests)
-            if (Request.Method != WebRequestMethods.Http.Get)
+            /*if (Request.Method != WebRequestMethods.Http.Get)
             {
                 var form = Request.Form;
                 model.CardholderName = form["CardholderName"];
@@ -92,7 +167,7 @@ namespace Nop.Plugin.Payments.Manual.Components
                 var selectedYear = model.ExpireYears.FirstOrDefault(x => x.Value.Equals(form["ExpireYear"], StringComparison.InvariantCultureIgnoreCase));
                 if (selectedYear != null)
                     selectedYear.Selected = true;
-            }
+            }*/
 
             return View("~/Plugins/Payments.Manual/Views/PaymentInfo.cshtml", model);
         }

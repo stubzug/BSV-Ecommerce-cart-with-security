@@ -16,10 +16,10 @@ namespace Nop.Plugin.Payments.Manual.Validators
         [Serializable]
         public class CryptoPayment
         {
-            public string PaymentFromAddress { get; set; }
+            //public string PaymentFromAddress { get; set; }
             public string PaymentToAddress { get; set; }
             public string RequiredPaymentAmount { get; set; }
-            public string TxHash { get; set; }
+            //public string TxHash { get; set; }
         }
 
         private static readonly HttpClient _client = new HttpClient();
@@ -38,7 +38,7 @@ namespace Nop.Plugin.Payments.Manual.Validators
             //RuleFor(x => x.CardNumber).NotEmpty().WithMessage(localizationService.GetResource("Payment.CardNumber.Required"));
             //RuleFor(x => x.CardCode).NotEmpty().WithMessage(localizationService.GetResource("Payment.CardCode.Required"));
 
-            RuleFor(x => x.TxHash).NotEmpty().WithMessage("Transaction ID is required.");
+            //RuleFor(x => x.TxHash).NotEmpty().WithMessage("Transaction ID is required.");
 
             //RuleFor(x => x.CardholderName).NotEmpty().WithMessageAwait(localizationService.GetResourceAsync("Payment.CardholderName.Required"));
             //RuleFor(x => x.CardNumber).IsCreditCard().WithMessageAwait(localizationService.GetResourceAsync("Payment.CardNumber.Wrong"));
@@ -61,7 +61,7 @@ namespace Nop.Plugin.Payments.Manual.Validators
             //    return true;
             //}).WithMessageAwait(localizationService.GetResourceAsync("Payment.ExpirationDate.Expired"));
 
-            RuleFor(x => x.TxHash).Must((x, context) =>
+            RuleFor(x => x.PaymentDestinationAddress).Must((x, context) =>
             {
                 //not specified yet
                 //if (string.IsNullOrEmpty(x.ExpireYear) || string.IsNullOrEmpty(x.ExpireMonth))
@@ -83,10 +83,10 @@ namespace Nop.Plugin.Payments.Manual.Validators
 
                 //string myJson = "{\"payment_from_address\": \"rcdumlao@centbee.com\",\"payment_to_address\":\"rcdumlao@centbee.com\",\"required_payment_amount\":\".01\",\"tx_hash\":\"802af3ce9b2f8cdd4a5570e56ece6fbe0ec2762227314f61445c566964d8c9a0\"}";
                 var payment = new CryptoPayment();
-                payment.PaymentFromAddress = "rcdumlao@entbee.com";
-                payment.PaymentToAddress = "1BnHDoDQmAgbyTnmJnuvSVhDqgKdxLY2gR";
+                //payment.PaymentFromAddress = "rcdumlao@entbee.com";
+                payment.PaymentToAddress = x.PaymentDestinationAddress;
                 payment.RequiredPaymentAmount = x.RequiredPaymentAmount.ToString();
-                payment.TxHash = x.TxHash;
+                //payment.TxHash = x.TxHash;
        
                 using (var client = new HttpClient())
                 {
@@ -106,7 +106,7 @@ namespace Nop.Plugin.Payments.Manual.Validators
                         return false;
                 }
 
-            }).WithMessage("Invalid Transaction ID.");
+            }).WithMessage("Invalid payment!");
         }
     }
 }

@@ -39,10 +39,13 @@ namespace Nop.Plugin.Payments.Manual.Models
         [NopResourceDisplayName("Payment.CardCode")]
         public string CardCode { get; set; }
 
-        [NopResourceDisplayName("Payment.TxHash")]
-        public string TxHash { get; set; }
+        //[NopResourceDisplayName("Payment.TxHash")]
+        //public string TxHash { get; set; }
 
         [NopResourceDisplayName("Payment.RequiredPaymentAmount")]
         public decimal? RequiredPaymentAmount { get; set; }
+
+        [NopResourceDisplayName("Payment.PaymentDestinationAddress")]
+        public string PaymentDestinationAddress { get; set; }
     }
 }
