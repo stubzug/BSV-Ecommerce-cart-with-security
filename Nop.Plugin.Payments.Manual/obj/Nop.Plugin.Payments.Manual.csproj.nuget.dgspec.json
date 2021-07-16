@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj": {}
+    "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj": {}
   },
   "projects": {
-    "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
+    "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
       "version": "4.4.0",
       "restore": {
-        "projectUniqueName": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj",
+        "projectUniqueName": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj",
         "projectName": "Nop.Core",
-        "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj",
+        "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj",
         "packagesPath": "/Users/wsdumlaogmail.com/.nuget/packages/",
-        "outputPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/obj/",
+        "outputPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/wsdumlaogmail.com/.config/NuGet/NuGet.Config"
@@ -118,14 +118,14 @@
         }
       }
     },
-    "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj": {
+    "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj": {
       "version": "4.4.0",
       "restore": {
-        "projectUniqueName": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj",
+        "projectUniqueName": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj",
         "projectName": "Nop.Data",
-        "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj",
+        "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj",
         "packagesPath": "/Users/wsdumlaogmail.com/.nuget/packages/",
-        "outputPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/obj/",
+        "outputPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/wsdumlaogmail.com/.config/NuGet/NuGet.Config"
@@ -140,8 +140,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
-                "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj"
+              "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
+                "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj"
               }
             }
           }
@@ -204,14 +204,14 @@
         }
       }
     },
-    "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj": {
+    "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj": {
       "version": "4.4.0",
       "restore": {
-        "projectUniqueName": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj",
+        "projectUniqueName": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj",
         "projectName": "Nop.Services",
-        "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj",
+        "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj",
         "packagesPath": "/Users/wsdumlaogmail.com/.nuget/packages/",
-        "outputPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/obj/",
+        "outputPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/wsdumlaogmail.com/.config/NuGet/NuGet.Config"
@@ -226,11 +226,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
-                "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj"
+              "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
+                "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj"
               },
-              "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj": {
-                "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj"
+              "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj": {
+                "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj"
               }
             }
           }
@@ -301,14 +301,14 @@
         }
       }
     },
-    "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj": {
+    "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
+        "projectUniqueName": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
         "projectName": "Nop.Plugin.Payments.Manual",
-        "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
+        "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
         "packagesPath": "/Users/wsdumlaogmail.com/.nuget/packages/",
-        "outputPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/obj/",
+        "outputPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/wsdumlaogmail.com/.config/NuGet/NuGet.Config"
@@ -323,8 +323,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj": {
-                "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+              "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj": {
+                "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
               }
             }
           }
@@ -357,14 +357,14 @@
         }
       }
     },
-    "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj": {
+    "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj": {
       "version": "4.4.0",
       "restore": {
-        "projectUniqueName": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "projectUniqueName": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
         "projectName": "Nop.Web.Framework",
-        "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
+        "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj",
         "packagesPath": "/Users/wsdumlaogmail.com/.nuget/packages/",
-        "outputPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/obj/",
+        "outputPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/wsdumlaogmail.com/.config/NuGet/NuGet.Config"
@@ -379,14 +379,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
-                "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj"
+              "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj": {
+                "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Core/Nop.Core.csproj"
               },
-              "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj": {
-                "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj"
+              "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj": {
+                "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Data/Nop.Data.csproj"
               },
-              "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj": {
-                "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj"
+              "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj": {
+                "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Libraries/Nop.Services/Nop.Services.csproj"
               }
             }
           }

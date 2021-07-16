@@ -13388,11 +13388,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
+      "projectUniqueName": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
       "projectName": "Nop.Plugin.Payments.Manual",
-      "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
+      "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/Nop.Plugin.Payments.Manual.csproj",
       "packagesPath": "/Users/wsdumlaogmail.com/.nuget/packages/",
-      "outputPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/obj/",
+      "outputPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Plugins/Nop.Plugin.Payments.Manual/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/wsdumlaogmail.com/.config/NuGet/NuGet.Config"
@@ -13407,8 +13407,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj": {
-              "projectPath": "/Users/wsdumlaogmail.com/Documents/repos/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
+            "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj": {
+              "projectPath": "/Users/wsdumlaogmail.com/Downloads/nopCommerce_4.40.3_Source/src/Presentation/Nop.Web.Framework/Nop.Web.Framework.csproj"
             }
           }
         }

@@ -1,0 +1,19 @@
+﻿@{ Layout = ""; }
+@model Nop.Plugin.Payments.Manual.Models.PaymentInfoModel
+
+
+<div class="section select-billing-address"><label for="billing-address-select">Please pay <b>@Model.RequiredPaymentAmount</b> to the following Bitcoin SV Address using your favorite wallet.  You can pay the amount by scanning the QR code or using the public address below.  Once payment is made, please provide the transaction ID.</label><div>
+<div class="section select-billing-address"><img style="margin:0 20 px 0" alt=@Model.PaymentDestinationAddress src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=@Model.PaymentDestinationAddress"><div>
+<div class="section select-billing-address"><label for="billing-address-select">@Model.PaymentDestinationAddress</label><div>
+
+@*<table>
+    <tr>
+        <td>
+            <label>Transaction ID:</label>
+        </td>
+        <td>
+            <input type="text" asp-for="TxHash" style="width:165px;" autocomplete="off" maxlength="100" />
+            <span asp-validation-for="TxHash"></span>
+        </td>
+    </tr>
+</table>*@
