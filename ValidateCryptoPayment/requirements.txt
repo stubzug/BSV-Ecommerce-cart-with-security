@@ -4,3 +4,7 @@
 
 azure-functions
 requests
+maya
+azure-cosmosdb-table
+azure-keyvault
+azure-identity
